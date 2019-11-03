@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<form method="POST" action="/payingGuestApp/viewPgAllDetails">
+    hello
+	{%csrf_token%}
+	{% for element in payingGuestDetails %}
+	<label>City</label><br>
+	{{element.location.city}}<br><br>
+    <label>State</label><br>
+	{{element.location.state}}<br><br>
+	<label>No of Beds</label><br>
+	{{element.no_of_beds}}<br><br>
+	<label>Gender</label><br>
+	{{element.male_or_female}}<br><br>
+    <label>Nearest Landmark</label><br>
+	{{element.nearestLandmark}}<br><br>
+    <label>Wifi Availabilty</label><br>
+	{{element.wifi_no_wifi}}<br><br>
+	<label>Air Conditioning Availabilty</label><br>
+	{{element.ac_no_ac}}<br><br>
+	<label>Price</label><br>
+	{{element.price}}<br><br>
+    <label>GST</label><br>
+	{{element.gst}}<br><br>
+    <label>Published Date</label><br>
+	{{element.publishedDate}}<br><br>
+	{% endfor %}
+
+</form>
+</body>
+</html>

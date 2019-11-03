@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<form method="POST" action="/payingGuestApp/updatePgDetails">
+
+	{%csrf_token%}
+	<label>City</label><br>
+	{{form.city}}<br><br>
+    <label>State</label><br>
+	{{form.state}}<br><br>
+	<label>No of Beds</label><br>
+	{{form.no_of_beds}}<br><br>
+	<label>Gender</label><br>
+	{{form.male_or_female}}<br><br>
+    <label>Nearest Landmark</label><br>
+	{{form.nearestLandmark}}<br><br>
+    <label>Wifi Availabilty</label><br>
+	{{form.wifi_no_wifi}}<br><br>
+	<label>Air Conditioning Availabilty</label><br>
+	{{form.ac_no_ac}}<br><br>
+	<label>Price</label><br>
+	{{form.price}}<br><br>
+    <label>GST</label><br>
+	{{form.gst}}<br><br>
+    <label>Published Date</label><br>
+	{{form.publishedDate}}<br><br>
+	<input type="submit" name="submit" value="Search">
+</form>
+</body>
+</html>

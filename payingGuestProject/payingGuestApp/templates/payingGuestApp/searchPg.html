@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <form method="POST" action="/payingGuestApp/searchForPg">
+
+	{%csrf_token%}
+	<label>City</label><br>
+	{{form.city}}<br><br>
+    <label>State</label><br>
+	{{form.state}}<br><br>
+	<label>Gender</label><br>
+	{{form.male_or_female}}<br><br>
+	<input type="submit" name="submit" value="Search">
+</form>
+</body>
+</html>

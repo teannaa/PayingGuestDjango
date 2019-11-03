@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+<form action="/payingGuestApp/login" method="post">
+    {% csrf_token %}
+
+
+    <label>Username</label><br>
+    {{form.username}}<br>
+    <label>Password</label><br>
+    {{form.password}}<br>
+    <input type="submit" value="Login">
+</form>
+</body>
+</html>

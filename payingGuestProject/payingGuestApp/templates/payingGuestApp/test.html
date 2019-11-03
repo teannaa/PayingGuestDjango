@@ -1,0 +1,22 @@
+
+<button id="request-btn">Click to get response</button>
+<div id=response></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#request-btn").click(function(){
+        $.ajax({
+        	url: "/blog/test-ajax",
+        	type: "GET",
+        	dataType:"json",
+        	success: function(result){
+
+				$("#response").html("The resonponse is  <strong>"+JSON.stringify(result)+"</strong>");
+				$("#response").append("<br>The value in  resonponse object <strong>foo</strong> is <strong>"+result.foo+"</strong>");
+       		}
+    });
+    });
+});
+</script>
